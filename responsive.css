@@ -1,0 +1,186 @@
+@media (max-width: 1366px) {
+  /* html {
+    font-size: 75%;
+  } */
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 67%;
+  }
+
+  .popup {
+    /* height: auto; */
+    background-size: auto;
+  }
+  .popup .container {
+    padding: 10rem 0;
+  }
+
+  .bride-image {
+    aspect-ratio: 3/1 !important;
+    object-position: auto;
+  }
+
+  #wave {
+    bottom: 245px;
+  }
+  #wave2 {
+    bottom: 238px;
+  }
+  .content-bride {
+    padding: 2rem 5% 8rem;
+    text-align: start;
+    align-items: start;
+    justify-content: center;
+  }
+  .content-bride h4 {
+    padding: 1.3rem 0;
+    font-size: 1.5rem;
+  }
+  .content-bride h1 {
+    font-size: 3.5rem;
+  }
+  .content-bride p,
+  .content-bride .button {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  /* coundown */
+  .coundown {
+    padding: 0;
+  }
+
+  .coundown img {
+    width: 75px;
+  }
+
+  .home .couple {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .col-lg-6 {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .home .invit {
+    font-size: 1.3rem;
+  }
+  .home p {
+    font-size: 1.6rem;
+  }
+
+  .home .couple .col-4,
+  .home .couple .col-8 {
+    text-align: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .home .couple img {
+    width: 70%;
+  }
+
+  .home .couple h3 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .row.couple .col-4 {
+    order: -1; /* Mengubah urutan elemen sehingga gambar muncul di atas */
+    margin-bottom: 20px;
+  }
+
+  .text-end {
+    text-align: center;
+    align-items: center;
+  }
+
+  .instagram {
+    width: 40px;
+    height: 40px;
+    margin: 2rem auto; /* Tengah di mobile dengan margin otomatis */
+  }
+  .instagram i {
+    font-size: 2rem;
+  }
+
+  .heart {
+    background: transparent !important;
+    position: static;
+    /* left: 0; */
+    /* box-shadow: 0; */
+    box-shadow: 0 0 0 0;
+    transform: none;
+    margin: 2.8rem auto 4rem;
+  }
+  .heart i {
+    font-size: 4rem;
+  }
+
+  .tgl-acara h5 {
+    padding: 0 1.5rem;
+  }
+
+  .doa img {
+    width: 75px;
+  }
+
+  .doa p {
+    max-width: 90%;
+  }
+
+  .img-story {
+    height: 50vh;
+  }
+
+  .gallery .container-gallery .img-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 95% !important;
+  }
+
+  .img-rek img {
+    width: 70px;
+  }
+
+  .row-2 {
+    flex-direction: column;
+  }
+
+  .wisher .img-wisher {
+    height: 60vh;
+  }
+
+  .content-wisher {
+    margin-top: -4.5rem;
+  }
+
+  .hope .content-hope {
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+  }
+
+  .img-hope::after {
+    background-image: linear-gradient(180deg, rgb(219, 211, 206) 0%, #e0dfdf00 75%);
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
