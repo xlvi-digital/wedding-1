@@ -132,8 +132,16 @@
     font-size: 2.8rem;
   }
 
+  .bulan-akad {
+    margin-left: 2rem;
+  }
+
+  .tgl-akad {
+    margin-right: 2rem;
+  }
+
   .tgl-akad h5 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   .maps {
