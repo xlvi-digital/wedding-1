@@ -403,8 +403,8 @@ body {
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(-10px);
+  left: 48%;
+  transform: translateX(-70%) translateY(-50px);
 }
 
 .heart i {
