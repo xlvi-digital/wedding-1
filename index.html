@@ -31,7 +31,7 @@
       <title>The Wedding Of : Upi & Boy</title>
       <!-- <link rel="shortcut icon" href="images/logo.png" /> -->
       <!-- toastr -->
-      <!-- <link rel="stylesheet" href="assets/toastr/toastr.min.css" /> -->
+      <link rel="stylesheet" href="assets/toastr/toastr.min.css" />
       <!-- sweaatalert -->
       <!-- <link rel="stylesheet" href="assets/sweetalert2/sweetalert2.min.css" /> -->
       <!-- Aos -->
@@ -93,6 +93,8 @@
         <h1>Upi & Boy</h1>
         <p>Minggu, 16 Februari 2025</p>
         <button type="button" class="button">save the date</button>
+        
+
       </div>
     </section>
     <!-- coundown -->
@@ -324,7 +326,7 @@
                 </div>
                 <div class="detail-rek">
                   <img src="assets/img/chip-atm-1-2-1.png" alt="">
-                  <p>1820012481404</p>
+                  <p id="textSalin">1820012481404</p>
                   <p id="yani">Lutfi Jamilah</p>
   
                 </div>
@@ -339,7 +341,7 @@
                 </div>
                 <div class="detail-rek">
                   <img src="assets/img/chip-atm-1-2-1.png" alt="">
-                  <p>152001424</p>
+                  <p id="textSalin2">152001424</p>
                   <p id="yani">Adi Sofa Natanegara</p>
   
                 </div>
@@ -414,6 +416,20 @@
            </div>
        </footer>
 
+       <div id="audio-container">
+        <audio id="song" autoplay loop>
+          <source src="audio/utsmansong.mp3" type="audio/mp3" />
+        </audio>
+
+        <div class="audio-icon-wrapper" style="display: none">
+          <i class='bx bx-album'></i>
+        </div>
+      </div>
+
+      <!-- <div id="logo">
+        <i class="bi bi-disc"></i>
+      </div> -->
+
        
 
     <script src="assets/js/script.js"></script>
@@ -449,6 +465,9 @@
       });
     </script>
 
+<script src="assets/toastr/toastr.min.js"></script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
@@ -464,6 +483,7 @@
             {
               innerHTML: 16, // Berhenti di 16
               duration: 3, // Durasi 2 detik
+              delay: 1,
               ease: "power2.out",
               snap: { innerHTML: 1 }, // Membantu agar angka berubah dengan mulus
               onUpdate: function () {

@@ -1,7 +1,9 @@
 var popup = document.getElementById("popup");
 var closeBtn = document.getElementsByClassName("close")[0];
-// var isAudioPlaying = true;
-// var logo = document.getElementById("logo");
+const audioIcon = document.querySelector(".audio-icon-wrapper");
+let isPlaying = false;
+const song = document.querySelector("#song");
+const icon = document.querySelector(".audio-icon-wrapper i");
 
 // Fungsi untuk menampilkan popup
 function showPopup() {
@@ -17,6 +19,7 @@ function showPopup() {
 function hidePopup() {
   // var popupAudio = document.getElementById("popupAudio");
   // popupAudio.play(); // Menghentikan audio
+  playAudio();
   popup.style.transform = "translateY(-100%)";
   document.body.style.overflow = "auto";
   popup.style.opacity = 0;
@@ -27,16 +30,24 @@ function hidePopup() {
   }, 5000); // Waktu yang sesuai dengan durasi transisi
 }
 
-// function pause() {
-//   var popupAudio = document.getElementById("popupAudio");
-//   if (isAudioPlaying) {
-//     popupAudio.pause(); // Menghentikan lagu jika sedang diputar
-//     isAudioPlaying = false;
-//   } else {
-//     popupAudio.play(); // Memulai kembali lagu jika tidak sedang diputar
-//     isAudioPlaying = true;
-//   }
-// }
+function playAudio() {
+  song.volume = 0.5;
+  audioIcon.style.display = "flex";
+  song.play();
+  isPlaying = true;
+}
+
+audioIcon.onclick = function () {
+  if (isPlaying) {
+    song.pause();
+    icon.classList.replace("bx-album", "bx-pause-circle"); // Ganti langsung
+  } else {
+    icon.classList.replace("bx-pause-circle", "bx-album"); // Ganti langsung
+    song.play();
+  }
+
+  isPlaying = !isPlaying;
+};
 
 // Tambahkan event listener pada tombol tutup
 closeBtn.addEventListener("click", hidePopup);
@@ -130,4 +141,31 @@ function resetCardStyles() {
   cards.forEach((card) => {
     card.style.animation = "";
   });
+}
+
+function noUtsman() {
+  var teks = document.getElementById("textSalin").textContent;
+  var teksTanpaTanda = teks.replace(/-/g, "");
+
+  var textarea = document.createElement("textarea");
+  textarea.value = teksTanpaTanda;
+  document.body.appendChild(textarea);
+
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+  toastr["success"]("No Dana Berhasil Disalin", "Success");
+}
+function noYani() {
+  var teks = document.getElementById("textSalin2").textContent;
+  var teksTanpaTanda = teks.replace(/-/g, "");
+
+  var textarea = document.createElement("textarea");
+  textarea.value = teksTanpaTanda;
+  document.body.appendChild(textarea);
+
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+  toastr["success"]("No Dana Berhasil Disalin", "Success");
 }
