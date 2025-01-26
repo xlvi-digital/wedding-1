@@ -110,7 +110,7 @@ body {
 
 .popup .content h1 {
   font-family: "analogue";
-  font-size: 4rem;
+  font-size: 3.5rem;
   letter-spacing: 1px;
   font-weight: 500;
 }
@@ -765,13 +765,13 @@ body {
   flex-direction: column;
   padding: 1.4rem 3rem;
   color: var(--text-color);
+  margin-top: 1rem;
 }
 
 .content-gift h2 {
   font-family: analogue;
   font-size: 3rem;
   font-weight: normal;
-
   margin-bottom: 1rem;
 }
 
@@ -1118,7 +1118,7 @@ body {
 }
 
 .hope h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: "analogue";
   font-weight: 400;
   color: var(--text-color);
