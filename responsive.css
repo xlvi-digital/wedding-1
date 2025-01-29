@@ -12,7 +12,8 @@
 
   .popup {
     /* height: auto; */
-    background-size: auto;
+    background-size: cover;
+    background-position: 50% 30%;
   }
   .popup .container {
     padding: 10rem 0;
@@ -166,6 +167,10 @@
 
   .card {
     width: 95% !important;
+  }
+
+  .img-gift {
+    height: 45vh;
   }
 
   .img-rek img {
