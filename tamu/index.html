@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nama Tamu | Lutfi & Adi</title>
+    <link rel="shortcut icon" href="../assets/img/xlvi-logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/toastr/toastr.min.css" />
+  </head>
+
+  <style>
+    @font-face {
+      font-family: power;
+      font-weight: normal;
+      font-style: normal;
+      src: url("fonts/power.woff2") format("woff2");
+      font-display: swap;
+    }
+    body {
+      background: #bbb1a7;
+      background-size: cover;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-family: "power";
+      font-weight: bold;
+      color: #725b50;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h1>Lutfi & Adi</h1>
+          <h5 class="text-center">Nama Tamu :</h5>
+
+          <!-- Input Name Section -->
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="nameInput" placeholder="Masukkan Nama Tamu" />
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary" id="generateUrl" type="button">Generate URL</button>
+          </div>
+
+          <!-- URL Display Section -->
+          <div class="url-container my-2" style="display: none">
+            <input type="text" class="form-control mb-2" id="urlInput" readonly />
+            <div class="text-center">
+              <button class="btn btn-secondary mb-2" id="copyLink">Copy Link</button>
+              <button class="btn btn-secondary mb-2" id="testLink">Test Link</button>
+              <button class="btn btn-success" id="sendWhatsApp">Kirim ke WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/jquery/jquery.js"></script>
+    <script src="../assets/toastr/toastr.min.js"></script>
+    <script>
+      document.getElementById("generateUrl").addEventListener("click", function () {
+        const nameInput = document.getElementById("nameInput").value.trim();
+
+        if (nameInput !== "") {
+          const baseUrl = "https://lutfi-adi-wedding.xlvi.my.id/";
+          const invitationUrl = `${baseUrl}?n=${encodeURI(nameInput).replace(/%20/g, "+")}`;
+
+          // Menampilkan URL di input
+          const urlInput = document.getElementById("urlInput");
+          urlInput.value = invitationUrl;
+
+          // Menampilkan tombol dan input URL
+          document.querySelector(".url-container").style.display = "block";
+
+          // Event listener untuk "Test Link"
+          document.getElementById("testLink").onclick = function () {
+            window.open(invitationUrl, "_blank");
+          };
+
+          // Event listener untuk "Kirim ke WhatsApp"
+          document.getElementById("sendWhatsApp").onclick = function () {
+            const message = `
+            Assalamu'alaikum Wr. Wb.
+            Bismillahirahmanirrahim.
+
+            Yth. ${nameInput}
+
+            Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/I, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami 
+
+            Lutfi & Adi Sofa
+            Berikut link undangan kami untuk info lengkap dari acara, bisa kunjungi 
+            ${invitationUrl}
+
+            Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.
+
+            Mohon maaf perihal undangan hanya di gabikan melalui pesan ini. Terima kasih banyak atas perhatiannya.
+
+            Wassalamu'alaikim Wr. Wb.
+            Terima Kasih.
+            
+            
+            `;
+            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, "_blank");
+          };
+
+          // Event listener untuk "Copy Link"
+          document.getElementById("copyLink").onclick = function () {
+            navigator.clipboard
+              .writeText(invitationUrl)
+              .then(() => {
+                alert("Link berhasil disalin!");
+              })
+              .catch((err) => {
+                console.error("Gagal menyalin link: ", err);
+              });
+          };
+        }
+      });
+    </script>
+  </body>
+</html>
