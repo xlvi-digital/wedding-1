@@ -84,6 +84,7 @@
           // Event listener untuk "Kirim ke WhatsApp"
           document.getElementById("sendWhatsApp").onclick = function () {
             let message = `Assalamu'alaikum Wr. Wb.
+    
 Bismillahirahmanirrahim.
 
 Yth. ${nameInput}
@@ -101,8 +102,8 @@ Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. Terima kasih bany
 Wassalamu'alaikum Wr. Wb.
 Terima Kasih.`;
 
-            // Menghapus tab dan newline berlebih agar tidak ada spasi berlebih di WhatsApp
-            message = message.replace(/\s+/g, " ").trim();
+            // Menghapus spasi/tab di awal setiap baris tanpa menghilangkan paragraf
+            message = message.replace(/^[\t ]+/gm, "");
 
             const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, "_blank");
