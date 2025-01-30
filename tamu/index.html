@@ -83,26 +83,27 @@
 
           // Event listener untuk "Kirim ke WhatsApp"
           document.getElementById("sendWhatsApp").onclick = function () {
-            const message = `Assalamu'alaikum Wr. Wb.
-            Bismillahirahmanirrahim.
+            let message = `Assalamu'alaikum Wr. Wb.
+Bismillahirahmanirrahim.
 
-            Yth. ${nameInput}
+Yth. ${nameInput}
 
-            Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/I, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami 
+Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/I, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami.
 
-            Lutfi & Adi Sofa
-            Berikut link undangan kami untuk info lengkap dari acara, bisa kunjungi 
-            ${invitationUrl}
+Lutfi & Adi Sofa
+Berikut link undangan kami untuk info lengkap dari acara, bisa kunjungi:
+${invitationUrl}
 
-            Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.
+Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.
 
-            Mohon maaf perihal undangan hanya di gabikan melalui pesan ini. Terima kasih banyak atas perhatiannya.
+Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. Terima kasih banyak atas perhatiannya.
 
-            Wassalamu'alaikim Wr. Wb.
-            Terima Kasih.`;
+Wassalamu'alaikum Wr. Wb.
+Terima Kasih.`;
 
             // Menghapus tab dan newline berlebih agar tidak ada spasi berlebih di WhatsApp
             message = message.replace(/\s+/g, " ").trim();
+
             const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, "_blank");
           };
