@@ -83,8 +83,7 @@
 
           // Event listener untuk "Kirim ke WhatsApp"
           document.getElementById("sendWhatsApp").onclick = function () {
-            const message = `
-            Assalamu'alaikum Wr. Wb.
+            const message = `Assalamu'alaikum Wr. Wb.
             Bismillahirahmanirrahim.
 
             Yth. ${nameInput}
@@ -100,10 +99,7 @@
             Mohon maaf perihal undangan hanya di gabikan melalui pesan ini. Terima kasih banyak atas perhatiannya.
 
             Wassalamu'alaikim Wr. Wb.
-            Terima Kasih.
-            
-            
-            `;
+            Terima Kasih.`;
             const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, "_blank");
           };
