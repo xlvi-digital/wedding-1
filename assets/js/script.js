@@ -31,7 +31,7 @@ function hidePopup() {
 }
 
 function playAudio() {
-  song.volume = 0.5;
+  song.volume = 1;
   audioIcon.style.display = "flex";
   song.play();
   isPlaying = true;
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // fitur Hitung Mundur
 // Mengatur waktu akhir perhitungan mundur
-var countDownDate = new Date("feb 16, 2025 10:00:00").getTime();
+var countDownDate = new Date("apr 27, 2025 10:00:00").getTime();
 
 // Memperbarui hitungan mundur setiap 1 detik
 var x = setInterval(function () {
@@ -169,7 +169,6 @@ function noYani() {
   document.body.removeChild(textarea);
   toastr["success"]("No Dana Berhasil Disalin", "Success");
 }
-
 
 // url Data
 const urlParams = new URLSearchParams(window.location.search);
