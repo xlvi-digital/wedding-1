@@ -94,11 +94,12 @@
   .home .couple h3 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    margin-top: 2.8rem;
     text-align: center;
   }
   .row.couple .col-4 {
     order: -1; /* Mengubah urutan elemen sehingga gambar muncul di atas */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 
   .text-end {
