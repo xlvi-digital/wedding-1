@@ -21,10 +21,10 @@
   --poppins: "Poppins", sans-serif;
 
   /* COLORS */
-  --main-bg: #bbb1a7;
+  --main-bg: #fff;
 
-  --main-color: #7d685e;
-  --text-color: #725b50;
+  --main-color: #e0b392;
+  --text-color: #2f568f;
   --shadow: 0 2px 2px rgba(0 0 0 0.5);
 }
 
@@ -122,7 +122,7 @@ body {
   fill: #ffffff;
   color: #ffffff;
   background-color: transparent;
-  background-image: linear-gradient(180deg, #b89e92 0%, #725b50 100%);
+  background-image: linear-gradient(180deg, var(--main-color) 0%, #ce8d5e 100%);
   border-style: none;
   border-radius: 20px 20px 20px 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
@@ -251,7 +251,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background-color: #bbb1a7;
+  background-color: var(--main-color);
   padding: 2rem 0;
 }
 
@@ -260,7 +260,7 @@ body {
 }
 
 .coundown h2 {
-  color: #fff;
+  color: var(--text-color);
   font-size: 2.8rem;
   font-family: "analogue";
   font-weight: bold;
@@ -275,7 +275,7 @@ body {
 
 .coundown .time .waktu {
   margin: 2rem;
-  color: #fff;
+  color: var(--text-color);
   font-family: "Poppins", Sans-serif;
   font-weight: normal;
 }
@@ -292,7 +292,7 @@ body {
 /* About */
 
 .home {
-  background-image: url(assets/img/bg-pattern.jpg);
+  background-image: url(assets/img/hero-image.jpg);
   background-size: cover;
   min-height: 100vh;
   background-position: center;
@@ -434,7 +434,7 @@ body {
 }
 
 .doa .container-doa {
-  background: #bbb1a7;
+  background: var(--main-color);
   padding: 2rem 0;
   border-radius: 40px;
   display: flex;
@@ -442,7 +442,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  color: #fff;
+  color: var(--text-color);
   font-style: italic;
 }
 
@@ -590,7 +590,7 @@ body {
   border-radius: 300px 300px 15px 15px;
   /* box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5); */
   width: 100%;
-  border: 2px solid var(--main-bg);
+  border: 2px solid var(--text-color);
   box-shadow: var(--shadow);
   padding: 7rem 1rem;
   /* display: flex; */
@@ -620,15 +620,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-left: 1px solid #010100;
-  border-right: 1px solid #010100;
+  border-left: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
   padding: 3rem;
+  color: var(--text-color);
 }
 
 .tgl-acara h5 {
   font-size: 2.8rem;
   padding: 0 1rem;
   margin: 0 -5.5rem;
+  color: var(--text-color);
 }
 
 .tgl-akad span {
@@ -641,7 +643,7 @@ body {
 
 .tgl-akad h5 {
   font-size: 5.2rem;
-  color: #ab755c;
+  color: #d59160;
   font-weight: 600;
   font-family: "analogue" serif;
   margin-bottom: 1rem;
@@ -664,6 +666,7 @@ body {
   /* padding-right: 1rem; */
   flex-direction: column;
   margin-bottom: 3rem;
+  color: var(--text-color);
 }
 
 .maps {
@@ -672,7 +675,7 @@ body {
   fill: #ffffff;
   color: #ffffff;
   background-color: transparent;
-  background-image: linear-gradient(180deg, #b89e92 0%, #725b50 100%);
+  background-image: linear-gradient(180deg, var(--main-color) 0%, #ce8d5e 100%);
   border-style: none;
   border-radius: 20px 20px 20px 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
@@ -729,7 +732,7 @@ body {
 
 .gift {
   padding: 5rem 7%;
-  background: #dbd3ce;
+  background: #d59160;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -740,7 +743,7 @@ body {
 .container-gift {
   padding: 2rem 4%;
   border-radius: 20px;
-  background-color: #ece6e3;
+  background-color: #fad4b9;
 }
 
 .img-gift {
@@ -933,7 +936,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(180deg, #e0dfdf00 33%, #ece6e3 90%);
+  background-image: linear-gradient(180deg, #e0dfdf00 33%, #f5caaa 90%);
 }
 
 .wisher .img-wisher img {
@@ -949,7 +952,7 @@ body {
   align-items: start;
   padding: 0 5% 2rem;
   flex-direction: column;
-  background-color: #ece6e3;
+  background-color: #f5caaa;
 }
 
 .content-wisher h2 {
@@ -1035,7 +1038,7 @@ body {
 .kirim {
   font-family: poppin;
   color: #fff;
-  background: #71451d;
+  background: var(--main-color);
   border: 1px solid;
   text-transform: uppercase;
   font-weight: 200;
@@ -1088,7 +1091,7 @@ body {
 
 .hope {
   padding-top: 5rem;
-  background: rgb(219, 211, 206);
+  background: rgb(247, 225, 208);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -1137,7 +1140,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(180deg, rgb(219, 211, 206) 0%, #e0dfdf00 80%);
+  background-image: linear-gradient(180deg, rgb(247, 225, 208) 0%, #e0dfdf00 80%);
 }
 
 .img-hope img {
@@ -1155,7 +1158,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(219, 211, 206);
+  background-color: rgb(247, 225, 208);
 }
 
 footer p {
