@@ -1073,18 +1073,18 @@ body {
   border-bottom: 1px solid var(--main-color);
 }
 
-#comments h5 {
+.card-comments h5 {
   font-family: inherit;
   font-weight: 600;
 }
 
-#comments span {
-  font-size: 1rem;
+.card-comments span {
+  font-size: 0.7rem;
   color: var(--text-color);
   margin-top: 0.5rem;
 }
 
-#comments a {
+.card-comments a {
   color: #000000;
   font-weight: 600;
 }
